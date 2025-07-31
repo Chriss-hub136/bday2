@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 400px;
+      z-index: 2;
+    }
+
+    .card h1 {
+      color: #ff4e50;
+      font-size: 2.5em;
+    }
+
+    .card p {
+      font-size: 1.2em;
+      color: #555;
+      margin-top: 20px;
+    }
+
+    .heart {
+      font-size: 50px;
+      color: #ff4e50;
+      animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    /* Falling hearts */
+    .falling-heart {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      color: #ff4e50;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Generate multiple hearts with different positions and durations */
+    .falling-heart:nth-child(1) { left: 10%; animation-duration: 6s; }
+    .falling-heart:nth-child(2) { left: 25%; animation-duration: 7s; }
+    .falling-heart:nth-child(3) { left: 40%; animation-duration: 5s; }
+    .falling-heart:nth-child(4) { left: 55%; animation-duration: 6.5s; }
+    .falling-heart:nth-child(5) { left: 70%; animation-duration: 8s; }
+    .falling-heart:nth-child(6) { left: 85%; animation-duration: 6.8s; }
+  </style>
+</head>
+<body>
+  <!-- Falling hearts -->
+  <div class="falling-heart">💖</div>
+  <div class="falling-heart">❤️</div>
+  <div class="falling-heart">💗</div>
+  <div class="falling-heart">💕</div>
+  <div class="falling-heart">💞</div>
+  <div class="falling-heart">💘</div>
+
+  <!-- Birthday Card -->
+  <div class="card">
+    <div class="heart">❤️</div>
+    <h1>Happy Birthday, Love!</h1>
+    <p>Wishing you a day filled with love, laughter, and all your favorite things. 💕</p>
+    <p>You mean the world to me, and I’m so lucky to have you. 🌍</p>
+    <p>— Your Love ❤️</p>
+  </div>
+</body>
+</html>
+
